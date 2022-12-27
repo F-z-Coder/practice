@@ -1,6 +1,18 @@
-faiz shaikhgit 
-f
-zz
-done
-new add
-ignore
+git add .
+git status
+
+git commit -m "tag"
+
+git log 
+git log --oneline
+git log --grep "tag name"
+git log -2
+
+git show (commitid)
+
+git config --global user.name "name"
+git config --global user.email "email"
+
+git remote add origin "url of repo"
+git push 
+git pull 
