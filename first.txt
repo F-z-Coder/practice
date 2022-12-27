@@ -24,3 +24,4 @@ git branch -d branchName
 
 git checkout branchName
 
+git merge branchNametoMerge
