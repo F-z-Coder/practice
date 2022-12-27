@@ -28,3 +28,9 @@ git branch -d branchName
 git checkout branchName
 
 git merge branchNametoMerge
+
+
+git stash 
+git stash list
+git stash apply 'stash@{index}'
+git stash clear
