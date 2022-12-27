@@ -8,7 +8,7 @@ git log --oneline
 git log --grep "tag name"
 git log -2
 
-git show (commitid)
+git show commitid
 
 git config --global user.name "name"
 git config --global user.email "email"
@@ -16,3 +16,11 @@ git config --global user.email "email"
 git remote add origin "url of repo"
 git push 
 git pull 
+
+
+git branch
+git branch branchName
+git branch -d branchName
+
+git checkout branchName
+
