@@ -32,7 +32,8 @@ git show commitid                                       // show commit associate
 
 git branch                                              // show all branch and current branch name
 git branch branchName                                   // create branch as namegiven (branchName)
-git branch -d branchName                                // delete branch as namegiven(branchName)
+git branch -d branchName                                // delete branch as namegiven(branchName) after merge in parent
+git branch -D branchName                                // delete branch as namegiven(branchName) before merge in parent
 
 git checkout branchName                                 // stwich branch from  current to given(branchName)
 git checkout -b branchName                              // create new branch and stwich to that branch given(branchName)
