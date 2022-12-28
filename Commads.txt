@@ -1,47 +1,68 @@
-git config --global user.name "name"
-git config --global user.email "email"
-git config --global --edit
-git config --global --list
-git config --list
+git config --global user.name "name"                     // add name necessrary to identify u while commit
+git config --global user.email "email"                   // add email necessrary to identify u while commit
+git config --global --edit                               // edit global username and mail 
+git config --global --list                               // show list of all global config parameter eg name email
+git config --list                                        // show list of all config parameter
 
 
-git init
+git init                                                 // initilaze floder to git repo by create .git hidden floder
 
-git status  
+git status                                               // show repo status i.e untrack file,file in workingspace(for adding in stage area), file in stageing area(ready to commit), file to commit etc
 
-git add filename
-git add .
+git add filename                                         // add file(given  filename) to stageing area for commit from workspace
+git add .                                                // add all file to stageing area for commit present in workspace
 
-git reset filename
-git reset .
+git reset filename                                      // move file present in stageing  area to workspace
+git reset .                                             // move all file present in stageing  area to workspace
 
-git commit -m "tag"
+git commit -m "message"                                 // commit file/work present in stageing area to local repo (in running branch)
+git revert commitid                                     // undo commit revert work to commitid 
+
+git log                                                 // show all commit  history
+git log --oneline                                       // show all commit history in oneline each                        
+git log -numberoflog                                    // show last (numberoflog) commit         
+git log --grep "given message"                          // show commit which whose message match with given message
+
+git tag -a tagnametogive -m "message for tag" commitid  // add tag to commit for fast find that commit
+git tag -d giventagname                                 // delete the commit tag 
+git tag                                                 // show all tag present
+
+git show giventagname                                   // show commit associate with giventagname
+git show commitid                                       // show commit associate with commitid
+
+git branch                                              // show all branch and current branch name
+git branch branchName                                   // create branch as namegiven (branchName)
+git branch -d branchName                                // delete branch as namegiven(branchName)
+
+git checkout branchName                                 // stwich branch from  current to given(branchName)
+git checkout -b branchName                              // create new branch and stwich to that branch given(branchName)
+
+git merge branchNametoMerge                             // merge given branch name(branchNametoMerge) with current
 
 
-git log 
-git log --oneline
-git log --grep "tag name"
-git log -2
+git remote add origin "url of repo"                    // add url of git repo for push and pull
+git push -u origin branchName                          // push content to given branch(branchName) of github repo
+git pull -u origin branchName                          // pull content from given branch(branchName) of github repo
+git push                                               // push to defualt branch(master) of github repo
+git pull                                               // pull  from defualt branch(master) of github repo
 
-git show commitid
-
-git branch
-git branch branchName
-git branch -d branchName
-
-git checkout branchName
-git checkout -b branchName
-
-git merge branchNametoMerge
+git clone urlofrepo                                    // copy all repo (present at given url of repo)
 
 
-git remote add origin "url of repo"
-git push -u origin branchName
-git pull -u origin branchName
-git push
-git pull
+git clean -n                                           // check all untrackfile
+git clean -f                                           // delete all untrackfile
 
-git stash 
-git stash list
-git stash apply 'stash@{index}'
-git stash clear
+git stash                                              // move all file present in workingspace to stash area 
+git stash list                                         // given list of work present in stash
+git stash apply 'stash@{index}'                        // copy work present in stash to workspace
+git stash clear                                        // delete all work present in stash area
+
+
+.gitignore                                             // add name of all file to ignore (not to track) in this file
+
+imp point :
+1: after git log -> press q for exit form vim
+2: after message writing(in vim)
+    press i to insert mode
+    press Esc to normalmode
+    press :wq to save and exit form vim
