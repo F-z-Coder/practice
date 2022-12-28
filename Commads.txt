@@ -7,15 +7,16 @@ git config --list
 
 git init
 
+git status  
+
 git add filename
 git add .
 
 git reset filename
 git reset .
 
-git status
-
 git commit -m "tag"
+
 
 git log 
 git log --oneline
@@ -37,6 +38,8 @@ git merge branchNametoMerge
 git remote add origin "url of repo"
 git push -u origin branchName
 git pull -u origin branchName
+git push
+git pull
 
 git stash 
 git stash list
